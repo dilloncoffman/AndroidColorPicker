@@ -25,7 +25,7 @@ public class ColorActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                view.setBackgroundColor(Color.WHITE); // when an item is selected, set Spinner background color to white
             }
 
             @Override
