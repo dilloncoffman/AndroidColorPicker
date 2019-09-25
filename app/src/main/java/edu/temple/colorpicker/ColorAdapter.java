@@ -1,9 +1,11 @@
 package edu.temple.colorpicker;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 public class ColorAdapter extends BaseAdapter {
 
@@ -33,6 +35,19 @@ public class ColorAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+
+        TextView textView;
+        if (convertView instanceof TextView) {
+            textView = (TextView) convertView;
+        } else {
+            textView = new TextView(context);
+        }
+
+        textView.setText(colors[position]);
+        textView.setTextSize(24);
+        textView.setPadding(5, 5, 5, 5);
+        textView.setBackgroundColor(Color.parseColor(colors[position]));
+
+        return textView;
     }
 }
