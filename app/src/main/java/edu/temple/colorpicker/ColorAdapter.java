@@ -17,14 +17,15 @@ public class ColorAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return colors.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return colors[position];
     }
 
+    // Our data set of colors does not have unique IDs for its elements other than its indices, so don't need to change this default implementation. Was also told not to worry about this in class.
     @Override
     public long getItemId(int position) {
         return 0;
